@@ -1,5 +1,5 @@
 {
-  "version": "1.0.3",
+  "version": "1.0.4",
   "package_revision": 1,
   "upstream_version": "1.14.2",
   "upstream_commit": "af6e64c3b69e6132ebaee0e1a3d24e93903f6709",
@@ -14,6 +14,6 @@
     "tfogo_checklinkname0"
   ],
   "mirror_base": "https://mirror.51343.ru/forkop/sing-box-x",
-  "release_tag": "1.0.3",
+  "release_tag": "1.0.4",
   "release_status": "stable"
 }
