@@ -28,7 +28,7 @@ export SOURCE_DATE_EPOCH=$(git -C work/source show -s --format=%ct HEAD)
 python3 scripts/prepare-source.py work/source
 gofmt -w work/source/include/native_api*.go
 gofmt -w work/source/adapter/inbound.go work/source/route/rule/*.go work/source/experimental/clashapi/connections*.go
-test_packages=(. ./common/listener ./route/... ./experimental/clashapi ./experimental/cachefile ./common/trafficcontrol ./common/sniff ./common/ja3 ./common/interrupt ./common/readwait ./common/tls ./log ./dns ./dns/transport ./dns/transport/fakeip ./transport/v2raygrpclite ./transport/v2rayhttp ./transport/v2raywebsocket ./transport/v2rayhttpupgrade ./transport/v2rayxhttp github.com/sagernet/sing-vmess/vless)
+test_packages=(. ./common/urltest ./common/listener ./route/... ./experimental/clashapi ./experimental/cachefile ./common/trafficcontrol ./common/sniff ./common/ja3 ./common/interrupt ./common/readwait ./common/tls ./log ./dns ./dns/transport ./dns/transport/fakeip ./transport/v2raygrpclite ./transport/v2rayhttp ./transport/v2raywebsocket ./transport/v2rayhttpupgrade ./transport/v2rayxhttp github.com/sagernet/sing-vmess/vless)
 (cd work/source; CGO_ENABLED=0 go test -timeout 5m -ldflags=-checklinkname=0 -tags "$tags" "${test_packages[@]}")
 (cd work/source; CGO_ENABLED=1 go test -race -timeout 5m -ldflags=-checklinkname=0 -tags "$tags" "${test_packages[@]}")
 (cd work/source; CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go list -deps -tags "$tags" ./cmd/sing-box) > work/dependencies.txt

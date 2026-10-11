@@ -90,5 +90,6 @@ if __name__ == "__main__":
     runpy.run_path(str(Path(__file__).with_name("prepare-fakeip.py")))["prepare"](args.source.resolve())
     runpy.run_path(str(Path(__file__).with_name("prepare-dns-sniff.py")))["prepare"](args.source.resolve())
     runpy.run_path(str(Path(__file__).with_name("prepare-runtime-opt.py")))["prepare"](args.source.resolve())
+    runpy.run_path(str(Path(__file__).with_name("prepare-latency.py")))["prepare"](args.source.resolve())
     prepare(args.source.resolve())
     runpy.run_path(str(Path(__file__).with_name("prepare-route-match.py")))["prepare"](args.source.resolve())
