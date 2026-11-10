@@ -1,0 +1,11 @@
+{
+  "files": {
+    "chrome155_test.go": "60686cddd62e44006abbe8f5345c9288aa1d066d85c6af3c7619420a408f2cfc",
+    "chrome155.go": "66df7fd1e772dec9bf545d414e9001be5f3c02e774ae46543ca814848665af9f"
+  },
+  "profile": "Chrome 155; Firefox 148 and Safari 26.3 retained",
+  "commit": "a13c59ffe98b",
+  "source": "https://github.com/refraction-networking/utls",
+  "license": "BSD-3-Clause",
+  "schema": 1
+}

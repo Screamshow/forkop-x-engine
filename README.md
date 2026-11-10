@@ -8,6 +8,9 @@ Compact proxy core for Forkop, based on the upstream sing-box core. Independent 
 
 https://sing-box.sagernet.org
 
+Local compatibility update and verification:
+[Xray compatibility, 2026-11-11](COMPATIBILITY-2026-11-11.md).
+
 ## License
 
 ```

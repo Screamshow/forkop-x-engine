@@ -49,7 +49,7 @@ jobs:
         with:
           name: sing-box-x-packages
           path: dist
-      - name: Publish release
+      - name: Create release draft
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -57,4 +57,4 @@ jobs:
           flags=()
           if [ "$status" != stable ]; then flags+=(--prerelease); fi
           if gh release view "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then exit 0; fi
-          gh release create "$GITHUB_REF_NAME" dist/* --repo "$GITHUB_REPOSITORY" "${flags[@]}" --title "Forkop X Engine $GITHUB_REF_NAME" --notes-file "RELEASE-NOTES-$GITHUB_REF_NAME.md"
+          gh release create "$GITHUB_REF_NAME" dist/* --draft --verify-tag --repo "$GITHUB_REPOSITORY" "${flags[@]}" --title "Forkop X Engine $GITHUB_REF_NAME" --notes-file "RELEASE-NOTES-$GITHUB_REF_NAME.md"

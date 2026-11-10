@@ -1,0 +1,25 @@
+{
+  "tag": "v1.14.4-r21",
+  "schema": 1,
+  "source": "https://github.com/podkop-net/podkop-engine",
+  "patches": [
+    {
+      "file": "0098-vless-warn-of-a-flow-over-a-transport-it-does-not-wo.patch",
+      "sha256": "5791d48c24e0767dc907b20f1898287eed08269b886880635615c6a90a7b5feb"
+    },
+    {
+      "file": "0106-reality-refuse-a-short_id-longer-than-it-can-be.patch",
+      "sha256": "1fa674b9b429f109dfd2a7dc0a93c1bbb22bf5ffbacdb257933675dd74fb4201"
+    },
+    {
+      "file": "0113-vless-warn-about-a-flow-over-the-quic-transport-too.patch",
+      "sha256": "96f66eef49c5bd9ad960f899d1da8cd150f9f3d4c996abcb564047b5f904ca7d"
+    },
+    {
+      "file": "0118-vless-VLESS-Encryption-of-Xray-for-the-outbound-with.patch",
+      "sha256": "7f86ed34ad297f3cb9b0284b3778831ecb03992cbb56e8dc2e216373e8d4f1de"
+    }
+  ],
+  "commit": "aaf75d5397aaaf56a65a35f9ccebf35d3cbd48f3",
+  "license": "GPL-3.0-or-later; Xray encryption files MPL-2.0"
+}
